@@ -2,12 +2,12 @@ pipeline {
     agent any
     
     tools {
-        terraform 'jenkins-terraform'
+        terraform 'terraform'
     }
     stages {
         stage ("checkout from GIT") {
             steps {
-                git branch: 'main', credentialsId: 'a39dea19-f3ff-49ad-bd54-faf1a478a89f', url: 'https://github.com/emir06900/project-1'
+                git branch: 'main', credentialsId: '7f273c8f-5342-413f-a1e2-22ef51809b2b', url: 'https://github.com/emir06900/project-2'
             }
         }
         stage ("terraform init") {
